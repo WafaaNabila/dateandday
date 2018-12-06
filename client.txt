@@ -1,0 +1,19 @@
+/ Client (java)
+
+import java.io.*;
+import java.net.*;
+
+class DateClient
+{
+    publicstaticvoid main(String args[]) throws Exception
+    {
+        Socket soc=new Socket("IP ADRESS",5217);        
+        BufferedReader in=new BufferedReader(
+                new InputStreamReader(
+                        soc.getInputStream()
+                        )
+                    );
+
+        System.out.println(in.readLine());
+    }    
+}
